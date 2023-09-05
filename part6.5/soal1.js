@@ -65,22 +65,32 @@ for (let counter2 = 1; counter2 <= 100; counter2 += 2) {
     console.log(`Angka ${counter2} adalah kelipatan 3`);
   }
 }
+console.log(" ");
 for (let counter5 = 1; counter5 <= 100; counter5 += 5) {
   if (counter5 % 6 === 0) {
     console.log(`Angka ${counter5} adalah kelipatan 6`);
   }
 }
+console.log(" ");
 for (let counter9 = 1; counter9 <= 100; counter9 += 9) {
   if (counter9 % 10 === 0) {
     console.log(`Angka ${counter9} adalah kelipatan 10`);
   }
 }
+console.log(" ");
 // 5. Bintang asteriks
 // Problem buatlah bintang seperti berikut
-// let input = 5;
+let input = 5;
 //hasilnya
 //*
 //**
 //***
 //****
 //*****
+let star = "";
+for (let i = 1; i <= input; i++) {
+  for (let j = i; j <= i; j++) {
+    star += "*";
+  }
+  console.log(star);
+}
