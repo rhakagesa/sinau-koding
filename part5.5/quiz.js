@@ -32,6 +32,7 @@ word =
   seventh;
 // ---------------------------------------
 console.log(word);
+console.log(" ");
 // ---------------------------------------
 
 // 2. Index Accessing - 1 by 1
@@ -45,16 +46,41 @@ console.log(word);
 //  tersebut!
 
 let word2 = "wow JavaScript is so cool";
-let exampleFirstWord2;
+let exampleFirstWord2 = word2[0] + word2[1] + word2[2];
+let exampleSecondWord2 =
+  word2[4] +
+  word2[5] +
+  word2[6] +
+  word2[7] +
+  word2[8] +
+  word2[9] +
+  word2[10] +
+  word2[11] +
+  word2[12] +
+  word2[13];
+let exampleThirdWord2 = word2[15] + word2[16];
+let exampleFourthWord2 = word2[18] + word2[19];
+let exampleFifthWord2 = word2[21] + word2[22] + word2[23] + word2[24];
 
-for (i = 0; i < word2.length; i++) {
-  exampleFirstWord2 = word2.split("");
-  console.log("Word " + [i] + " : " + exampleFirstWord2[i]);
-}
+console.log("First Word: " + exampleFirstWord2);
+console.log("Second Word: " + exampleSecondWord2);
+console.log("Third Word: " + exampleThirdWord2);
+console.log("Fourth Word: " + exampleFourthWord2);
+console.log("Fifth Word: " + exampleFifthWord2);
 
 // // ---------------------------------------
-let wordJoin = exampleFirstWord2.join("");
-console.log(wordJoin);
+console.log(
+  exampleFirstWord2 +
+    " " +
+    exampleSecondWord2 +
+    " " +
+    exampleThirdWord2 +
+    " " +
+    exampleFourthWord2 +
+    " " +
+    exampleFifthWord2
+);
+console.log(" ");
 // // ---------------------------------------
 
 // 3. Breaking Sentence (Again) using Substring
@@ -86,6 +112,7 @@ console.log(
     " " +
     exampleFifthWord3
 );
+console.log(" ");
 // // ---------------------------------------
 
 // // 4. Breaking Sentence (yet Again) and Count Each Length
@@ -123,4 +150,16 @@ console.log(
 );
 console.log(
   "Fifth Word: " + exampleFifthWord4 + ", with length: " + fifthWordLength
+);
+
+console.log(
+  exampleFirstWord4 +
+    " " +
+    exampleSecondWord4 +
+    " " +
+    exampleThirdWord4 +
+    " " +
+    exampleFourthWord4 +
+    " " +
+    exampleFifthWord4
 );
