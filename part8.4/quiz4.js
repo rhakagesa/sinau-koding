@@ -1,5 +1,16 @@
 function pasanganTerbesar(num) {
   // you can only write your code here!
+  let numbr = num.toString(),
+    bigPartner = 0,
+    bigPartnerNext = 0;
+
+  for (let i = 0; i < numbr.length; i++) {
+    bigPartnerNext = parseInt(numbr[i] + numbr[i + 1]);
+    if (bigPartner < bigPartnerNext) {
+      bigPartner = bigPartnerNext;
+    }
+  }
+  return bigPartner;
 }
 
 // TEST CASES
