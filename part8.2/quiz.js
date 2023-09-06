@@ -1,4 +1,5 @@
 /*
+Soal 1
 Buatlah sebuah fungsi dengan nama dataHandling dengan sebuah parameter untuk menerima argumen. Argumen yang akan diterima adalah sebuah array yang berisi beberapa array sejumlah n.
 Tugas kamu adalah mengimplementasikan fungsi dataHandling agar dapat menampilkan data-data pada dari argumen seperti di bawah ini:
 */
@@ -52,3 +53,47 @@ function dataHandling(array) {
 }
 
 console.log(dataHandling(input));
+
+//Soal 2
+
+let input2 = [
+  "0001",
+  "Roman Alamsyah ",
+  "Bandar Lampung",
+  "21/05/1989",
+  "Membaca",
+];
+
+function dataHandling2(input) {
+  let array1 = input;
+  array1.splice(1, 2, "Roman Alamsyah Elsharawy", "Provisi Bandar Lampung");
+  array1.splice(4, 1, "Pria", "SMA Internasional Metro");
+  console.log(array1);
+  let array2 = array1[3].split("/");
+  for (let i = 0; i < array2.length; i++) {
+    if (array2[i] === "05") {
+      console.log("Mei");
+      console.log(array2.reverse());
+      console.log(array2.reverse().join("-"));
+    }
+  }
+  array1[1];
+  let strName = "";
+  for (let j = 0; j < array1[1].length - 10; j++) {
+    strName += array1[1][j];
+  }
+  console.log(strName);
+  return;
+}
+
+dataHandling2(input2);
+
+/**
+ * keluaran yang diharapkan (pada console)
+ *
+ * ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+ * Mei
+ * ["1989", "21", "05"]
+ * 21-05-1989
+ * Roman Alamsyah //batasi hanya 15 karakter saja pada array elemen ke 2
+ */
