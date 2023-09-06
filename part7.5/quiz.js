@@ -56,9 +56,14 @@ console.log("");
 
 function konversiMenit(menit) {
   // you can only write your code here!
-  let hour = menit % 60;
+  let hour = Math.floor(menit / 60);
+  let minute = menit % 60;
 
-  return hour;
+  if (minute <= 9) {
+    return `${hour}:0${minute}`;
+  } else {
+    return `${hour}:${minute}`;
+  }
 }
 
 // TEST CASES
