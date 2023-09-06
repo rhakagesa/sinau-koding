@@ -52,7 +52,7 @@ function dataHandling(array) {
   return;
 }
 
-console.log(dataHandling(input));
+dataHandling(input);
 
 //Soal 2
 
