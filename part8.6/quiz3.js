@@ -1,16 +1,19 @@
 //tentukan apakah ini deret aritmatika atau bukan
 function tentukanDeretAritmatika(arr) {
   // you can only write your code here!
-  let first;
-  let second;
+  let first = arr[1] - arr[0];
 
   for (let i = 0; i < arr.length; i++) {
-    first = arr[i + 1] - arr[i];
-    second = arr[i + 2] - arr[i + 1];
-    if (first === second) {
-      return true;
+    if (i !== arr.length - 1) {
+      let second = arr[i + 1] - arr[i];
+
+      if (first === second) {
+        first = second;
+      } else {
+        return false;
+      }
     } else {
-      return false;
+      return true;
     }
   }
 }
