@@ -7,22 +7,22 @@ note kenapa angka 343 adalah palindrome? karena angka 343 dibalik tetep 343 eaaa
 
 function angkaPalindrome(num) {
   // you can only write your code here!
-  let strNumber = num.toString().split("").reverse();
-  let isNumber = 0;
-  for (let i = 0; i < strNumber.length; i++) {
-    if (strNumber[i] !== "0") {
-      isNumber += parseInt(strNumber[i]);
+  num++;
+  while (true) {
+    let strNum = num.toString();
+    let revNum = strNum.split("").reverse().join("");
+
+    if (strNum === revNum) {
+      return num;
     } else {
-      strNumber[i] = Math.sign(0);
-      isNumber += strNumber[i];
+      num++;
     }
   }
-  return isNumber;
 }
 
-// // TEST CASES
-// console.log(angkaPalindrome(8)); // 9
+// TEST CASES
+console.log(angkaPalindrome(8)); // 9
 console.log(angkaPalindrome(10)); // 11
-// console.log(angkaPalindrome(117)); // 121
-// console.log(angkaPalindrome(175)); // 181
-// console.log(angkaPalindrome(1000)); // 1001
+console.log(angkaPalindrome(117)); // 121
+console.log(angkaPalindrome(175)); // 181
+console.log(angkaPalindrome(1000)); // 1001

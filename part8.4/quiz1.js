@@ -5,10 +5,8 @@ Soal 1
 
 function palindrome(kata) {
   // you can only write your code here!
-  let word = kata.split("");
-  let revWord = word.reverse();
-  let strRevWord = revWord.join("");
-  if (kata === strRevWord) {
+  let revWord = kata.split("").reverse().join("");
+  if (kata === revWord) {
     return true;
   } else {
     return false;
