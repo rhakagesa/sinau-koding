@@ -13,9 +13,9 @@ function angkaPrima(angka) {
     while (pembagi * pembagi <= angka) {
       if (angka % pembagi === 0) {
         return false;
-      } else if (angka % (pembagi + 2) === 0) {
+      } else {
+        pembagi += 2;
       }
-      pembagi += 2;
     }
     return true;
   }
