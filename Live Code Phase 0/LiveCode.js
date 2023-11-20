@@ -87,6 +87,27 @@ Contoh input dan output bisa dilihat di test case.
 
 function trainSeating(penumpang) {
   //code here
+  const result = {};
+  penumpang.forEach((data) => {
+    const name = data.nama;
+    const stationName = data.gerbong;
+    const seatNumber = data.seat;
+
+    if (!result[stationName]) {
+      result[stationName] = [
+        {
+          nama: name,
+          seat: seatNumber,
+        },
+      ];
+    } else {
+      result[stationName].push({
+        nama: name,
+        seat: seatNumber,
+      });
+    }
+  });
+  return result;
 }
 
 console.log(
