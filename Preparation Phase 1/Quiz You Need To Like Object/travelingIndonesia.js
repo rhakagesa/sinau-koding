@@ -230,7 +230,6 @@ function travelingIndonesia(arr, emoney) {
 
   return result;
 }
-console.log(travelingIndonesia(["Gesa-Surabaya-Yogyakarta-Kereta"], "Dana"));
 
 console.log(
   travelingIndonesia(
