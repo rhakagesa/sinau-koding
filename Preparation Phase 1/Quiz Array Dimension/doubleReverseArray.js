@@ -20,13 +20,21 @@ output: [ 'tamkin', 'masuk', 'benci', 'cinta', 'ubar' ]
 function doubleReverse(arr) {
   //code here
   if (arr.length === 0) return "invalid input parameter";
-  arr.reverse();
-  arr.map((word, index) => {
-    if (word.length % 2 === 0) {
-      arr[index] = word.split("").reverse().join("");
+
+  const result = [];
+  arr.forEach((words) => {
+    let str = "";
+    if (words.length % 2 === 0) {
+      for (let i = words.length - 1; i >= 0; i--) {
+        str += words[i];
+      }
+      result.unshift(str);
+    } else {
+      result.unshift(words);
     }
   });
-  return arr;
+
+  return result;
 }
 
 console.log(doubleReverse(["rabu", "cinta", "benci", "masuk", "nikmat"]));

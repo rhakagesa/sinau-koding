@@ -228,6 +228,14 @@ function travelingIndonesia(arr, emoney) {
     }
   }
 
+  for (let y = 0; y < result.length; y++) {
+    for (let z = 1; z <= result.length - 1; z++) {
+      if (result[z - 1].totalCost < result[z].totalCost) {
+        [result[z - 1], result[z]] = [result[z], result[z - 1]];
+      }
+    }
+  }
+
   return result;
 }
 
