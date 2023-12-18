@@ -13,7 +13,8 @@ function consonantCounterRecursive(str) {
       firstChar !== "i" &&
       firstChar !== "u" &&
       firstChar !== "e" &&
-      firstChar !== "o";
+      firstChar !== "o" &&
+      firstChar !== "";
 
     // Rekursif: Tambahkan 1 jika karakter adalah konsonan, dan panggil fungsi untuk sisa string
     return (isConsonant ? 1 : 0) + consonantCounterRecursive(str.slice(1));
