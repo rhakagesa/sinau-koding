@@ -17,12 +17,16 @@ RULES
 function palindromeRecursive(sentence) {
   //code here - saran bikin fungsi rekursif didalam sini
   //lalu bandingkan dengan sentence
-  const inputSentence = sentence;
 
   if (sentence.length === 1) {
-    return sentence[0] === inputSentence[inputSentence.length];
+    return true;
+  } else {
+    if (sentence[0] === sentence[sentence.length - 1]) {
+      return palindromeRecursive(sentence.slice(1, sentence.length - 1));
+    } else {
+      return false;
+    }
   }
-  return palindromeRecursive(sentence.slice(1));
 }
 
 // TEST CASES
